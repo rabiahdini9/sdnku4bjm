@@ -23,6 +23,12 @@ class DatabaseSeeder extends Seeder
             ]
         )->forceFill(['role' => 'admin'])->save();
 
+        $this->call([
+            IdentitasSeeder::class,
+            VisiMisiSeeder::class,
+            StrukturOrganisasiSeeder::class,
+        ]);
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
