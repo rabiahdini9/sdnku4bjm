@@ -30,6 +30,17 @@
 </section>
 
 
+@if (! $identitas)
+    <div class="bg-gray-100 py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+                <h2 class="text-2xl font-bold text-green-700 mb-4">Data identitas sekolah belum tersedia</h2>
+                <p class="text-gray-600">Silakan lengkapi data identitas pada halaman admin sebelum menampilkan profil sekolah.</p>
+            </div>
+        </div>
+    </div>
+@else
+
 <!-- ================= CONTENT ================= -->
 <div class="bg-gray-100 py-16 px-4">
 
@@ -158,5 +169,7 @@
     </div>
 
 </div>
+
+@endif
 
 @endsection

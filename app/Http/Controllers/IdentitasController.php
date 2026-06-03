@@ -73,7 +73,7 @@ class IdentitasController extends Controller
 
     public function home()
     {
-        $identitas = Identitas::latest()->first();
+        $identitas = Identitas::latest()->first() ?? new Identitas();
 
         return view('home', compact('identitas'));
     }
